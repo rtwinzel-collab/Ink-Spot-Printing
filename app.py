@@ -2,34 +2,13 @@ import streamlit as st
 import random
 from datetime import datetime
 
-# --- EMAIL SIMULATOR MODE (100% Ligtas sa Error at Network Block) ---
+# --- EMAIL SIMULATOR MODE ---
 def send_simulated_email(to_email, student_name, order_id, status, payment_status):
     """Simulates a live email notification instantly for presentation purposes."""
     return True, f"Simulated email successfully sent to {to_email} inbox!"
 
-# --- PAGE CONFIGURATION (Sky Blue & White Theme) ---
+# --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="Ink Spot Printing Studio", page_icon="🖨️", layout="centered")
-
-st.markdown("""
-    <style>
-    .stApp {
-        background-color: #F0F8FF;
-    }
-    h1, h2, h3 {
-        color: #0288D1;
-    }
-    .stButton>button {
-        background-color: #0288D1;
-        color: white;
-        border-radius: 8px;
-        border: none;
-    }
-    .stButton>button:hover {
-        background-color: #0277BD;
-        color: white;
-    }
-    </style>
-""", unsafe_allow_html=True)
 
 # --- MOCK DATABASE & ARCHIVE STORAGE ---
 if "print_queue" not in st.session_state:
